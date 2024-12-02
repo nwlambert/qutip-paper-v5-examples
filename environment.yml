@@ -1,0 +1,15 @@
+name: qutip-paper
+channels:
+- conda-forge
+dependencies:
+- qutip==5.0.4
+- python==3.12
+- pip==22.1.2
+- numpy==2.0.0
+- scipy==1.14.1
+- matplotlib==3.9
+- mpmath==1.2.1
+- pytest==7.1.2
+- qutip-qip==0.4.0
+- qutip-jax
+- tqdm
