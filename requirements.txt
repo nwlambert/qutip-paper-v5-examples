@@ -1,9 +1,11 @@
 qutip==5.0.4
-numpy==2.0.0
+numpy==1.26.0
 scipy==1.14.1
-matplotlib==3.9
+matplotlib==3.9.3
 mpmath==1.2.1
 pytest==7.1.2
 qutip-qip==0.4.0
-qutip-jax @ git+https://github.com/qutip/qutip-jax@main
+qutip-jax
 tqdm
+qutip-qtrl
+qutip-qoc
