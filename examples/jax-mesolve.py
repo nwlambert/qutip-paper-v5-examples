@@ -72,8 +72,8 @@ with jax.default_device(jax.devices("cpu")[0]):
     print(sz1)
 
 
-# Use JAX as the backend
-qutip_jax.set_as_default()
+# Use JAX as the backend. Requires QuTiP > 5.0.4
+#qutip_jax.set_as_default()
 
 
-qutip_jax.set_as_default(revert = True)
+#qutip_jax.set_as_default(revert = True)
