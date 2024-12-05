@@ -31,15 +31,31 @@ bath = env.approx_by_matsubara(Nk=5).to_bath(Q)
 # -- HEOM --
 solver = HEOMSolver(Hsys, bath, max_depth=9)
 result_h = solver.run(rho0, t)
-# APPROPIATE JUMP OPS IN THIS CASE
-sp=Qobj([[ 0.15384615 , 0.04658087],[-0.50811933 ,-0.15384615]])
-sz= Qobj([[ 0.69230769 , 0.46153846],[ 0.46153846, -0.69230769]])
-sm = sp.dag()
-# -- LINDBLAD --
-c_ops = [np.sqrt(env.power_spectrum(1.803))*sp,
-         np.sqrt(env.power_spectrum(-1.803))*sm,
-         np.sqrt(env.power_spectrum(0))*sz]
-result_lindblad = mesolve(Hsys, rho0, t, c_ops)
+
+# -- Lindblad manual --
+all_energy, all_state = Hsys.eigenstates()
+Nmax = len(all_state)
+collapse_list = []
+for i in range(Nmax):
+    for j in range(Nmax):
+        delE = (all_energy[j] - all_energy[i])
+        if i!=j:
+            rate = env.power_spectrum(delE) * (
+                np.absolute(Q.matrix_element(all_state[i].dag(), all_state[j])) ** 2
+            )
+
+            if rate > 0:
+                collapse_list.append(np.sqrt(rate) * all_state[i] * all_state[j].dag())
+        else:
+            rate = 2*env.power_spectrum(delE) * (
+                np.absolute(Q.matrix_element(all_state[i].dag(), all_state[j])) ** 2
+            )
+
+            if rate > 0:
+                collapse_list.append(np.sqrt(rate) * all_state[i] * all_state[j].dag())
+
+result_lindblad = mesolve(Hsys, rho0, t, collapse_list)
+
 
 
 def nth(w):
