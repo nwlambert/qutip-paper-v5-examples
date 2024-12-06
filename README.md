@@ -25,43 +25,43 @@ pip install -r requirements.txt
 
 List of files and their purpose:
 
-- enr_waveguide.py:  An example of how to use ENR states to simulate a qubit emitting into a waveguide.
+- enr_waveguide.py:  An example of how to use ENR states to simulate a qubit emitting into a waveguide. Reproduces figs 15 and 16.
 
 - enrstates.py:  Basic example of ENR states.
 
 - jax-countstats.py: An example of how to use qutip-jax + jax Auto-diff to calculate counting statistics from a master equation.
 
-- jax-mesolve.py: Basic setup of an Ising spin chain model, used as a foundation for the GPU benchmark results in the QuTiP 5 paper.
+- jax-mesolve.py: Basic setup of an Ising spin chain model, used as a foundation for the GPU benchmark results in the QuTiP 5 paper in Fig 4.
 
-- mcsolve.py: An example of how to QuTiP's Monte-Carlo quantum jump solver.
+- mcsolve.py: An example of how to QuTiP's Monte-Carlo quantum jump solver. Used to generate Fig. 5.
 
-- mesolve.py: An example of how to use QuTiP's master equation, both directly and with globally-defined jump rates, and  a comparison to the Bloch-Redfield solver.
+- mesolve.py: An example of how to use QuTiP's master equation, both directly and with globally-defined jump rates, and  a comparison to the Bloch-Redfield solver. Used to generate Fig. 2.
 
 - mpl_setup.py: Utility file for consisten matlpotlib settings.
 
-- nm_mcsolve_example.py: An example of how to use the non-Markovia Monte-Carlo solver (for a qubit coupled to a waveguide).
+- nm_mcsolve_example.py: An example of how to use the non-Markovia Monte-Carlo solver (for a qubit coupled to a waveguide).  Used to generate Fig. 6.
 
-- p_Floquet_speed_text.py: Benchmarking of Floquet states versus direct sesolve().
+- p_Floquet_speed_text.py: Benchmarking of Floquet states versus direct sesolve(). Used to generate Fig. 7.
 
-- p_Ising_with_drive_Floquet.py: Benchmarking of Floquet states versus system size with the Ising model.
+- p_Ising_with_drive_Floquet.py: Benchmarking of Floquet states versus system size with the Ising model. Used to generate fig. 8.
 
-- qip_renderer.py: Basic example of new QuTiP-QIP circuit plotting functionality.
+- qip_renderer.py: Basic example of new QuTiP-QIP circuit plotting functionality. Used to generate fig. 18.
 
-- qoc.py: Example of new optimal control methods from qutip-qoc.
+- qoc.py: Example of new optimal control methods from qutip-qoc. Used to generate Fig. 17.
 
-- qutipqip.py: A more involved example of how to use qutip-qip for quantum simulation.
+- qutipqip.py: A more involved example of how to use qutip-qip for quantum simulation. Used to generate figs. 21-24.
 
-- smesolve.py: A basic example of how to use the stochastic master equation solver.
+- smesolve.py: A basic example of how to use the stochastic master equation solver. Used to generate Fig. 9.
 
 - solver.py: A basic example of how to use the new solver interface.
 
 - /environment_examples/environment.py: A utility file for the new environment class interface. Replaced by latest official qutip release.
 
-- /environment_examples/heom_example.py: A basic example of how to use the new envirionment interface with the HEOM solver.
+- /environment_examples/heom_example.py: A basic example of how to use the new envirionment interface with the HEOM solver. Used to generate Fig. 10 and 11.
 
-- /environment_examples/heom_transition.py:  A more involved example of how to use the fitting features to capture the spin-boson phase transition with the HEOM solver.
+- /environment_examples/heom_transition.py:  A more involved example of how to use the fitting features to capture the spin-boson phase transition with the HEOM solver. Used to generate Fig. 12
 
-- /environment_examples/mesolvedriven.py: An example of how to model driven systems with mesolve and the HEOM solver.
+- /environment_examples/mesolvedriven.py: An example of how to model driven systems with mesolve and the HEOM solver. Used to generate Fig. 3.
 
 The alternative development versions of the last examples, and the jax-based mcsolve example, are available in:
 
