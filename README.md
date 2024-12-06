@@ -5,7 +5,7 @@ These examples are provided in a unmaintained static format, alongside a environ
 Continously maintained and documented versions of the main examples are available in the qutip tutorials repository.
 
 Most examples here will work with the pinned versions in the environment.yml or requirements.txt file. 
-However, we also provide some alternative versions of the examples using the environments class based on the current developemnt version of github, in the
+However, we also provide some alternative versions of the examples using the environments class based on the current development version of github, in the
 /environment_examples_dev/ folder, as well as an example of `mcsolve()` using JAX which requires the development versions of QuTiP-JAX  and QuTiP.
 
 
