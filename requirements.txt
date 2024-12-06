@@ -5,6 +5,8 @@ matplotlib==3.9.3
 mpmath==1.2.1
 pytest==7.1.2
 qutip-qip==0.4.0
+jax==0.4.13
+jaxlib==0.4.13
 qutip-jax
 tqdm
 qutip-qtrl

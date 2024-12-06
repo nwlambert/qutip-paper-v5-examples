@@ -99,9 +99,9 @@ oh = OhmicEnvironment(T=T, alpha=lam, wc=gamma, s=1)
 w = np.linspace(0, 100, 2000)
 env_fs, _ = oh.approx_by_sd_fit(wlist=w, Nk=3, Nmax=3)
 
-
 t = np.linspace(0, 10, 1000)
 env_fc, _ = oh.approx_by_cf_fit(tlist=t, Ni_max=5, Nr_max=4, target_rsme=None)
+
 
 
 # -- USING A USER DEFINED ENVIRONMENT --

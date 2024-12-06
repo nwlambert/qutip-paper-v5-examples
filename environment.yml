@@ -10,6 +10,8 @@ dependencies:
 - matplotlib==3.9.3
 - mpmath==1.2.1
 - pytest==7.1.2
+- jax==0.4.13
+- jaxlib==0.4.13
 - tqdm
 - git
 - pip:

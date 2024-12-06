@@ -59,7 +59,7 @@ Q = sigmaz()
 Ttot = 1200
 # Times to solve for:
 tlist = np.linspace(0, Ttot, 1000)
-rho0 = basis(2, 0) * basis(2, 0).dag()
+rho0 = basis(2, 0) * basis(2, 0).dag()  
 
 models = []
 for i in range(len(alphas)):
