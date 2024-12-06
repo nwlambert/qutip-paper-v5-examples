@@ -1,0 +1,13 @@
+qutip==5.0.4
+numpy==1.26.0
+scipy==1.14.1
+matplotlib==3.9.3
+mpmath==1.2.1
+pytest==7.1.2
+qutip-qip==0.4.0
+jax==0.4.13
+jaxlib==0.4.13
+qutip-jax
+tqdm
+qutip-qtrl
+qutip-qoc
